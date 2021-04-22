@@ -1,0 +1,86 @@
+.button {
+	padding: 16px 30px;
+	border-radius: 4px;
+	color: #ffffff;
+	font-family: $BoldFont;
+	font-size: 0.9rem;
+	transition: .4s all ease-in;
+}
+
+.button-success {
+	background-color: $green-color;
+	&:hover {
+		background-color: darken($green-color, 6%);
+	}
+	&:focus {
+		background-color: darken($green-color, 10%);
+	}
+}
+
+.button-primary {
+	background-color: $blue-color;
+	&:hover {
+		background-color: darken($blue-color, 6%);
+	}
+	&:focus {
+		background-color: darken($blue-color, 10%);
+	}
+}
+
+.button-video {
+	position: relative;
+	padding-left: 34px;
+	&::before {
+		position: absolute;
+		top: 14px;
+		left: 0;
+		content: '';
+		background: url(/assets/img/icons/play.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.scroll-down {
+	position: absolute;
+	right: 0;
+	bottom: 30px;
+	left: 0;
+	margin: 0 auto;
+	width: 34px;
+	height: 55px;
+}
+.mouse {
+	width: 3px;
+	padding: 10px 15px;
+	height: 35px;
+	border: 2px solid #fff;
+	border-radius: 25px;
+	opacity: .5;
+	box-sizing: content-box;
+}
+.scroll {
+	width: 3px;
+	height: 10px;
+	border-radius: 25%;
+	background-color: #fff;
+	animation-name: scroll;
+	animation-duration: 2.2s;
+	animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+	animation-iteration-count: infinite;
+}
+@keyframes scroll {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(15px);
+		opacity: 0;
+	}
+}

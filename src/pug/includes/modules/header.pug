@@ -1,0 +1,76 @@
+header.header
+	.container
+		.header-top(itemscope='' itemtype='http://schema.org/Organization')
+			.header-top__logo
+				a(href='/')
+					img(src='/assets/img/logo.svg' alt='logo')
+				.header-top__company
+					.company(itemprop='name') garage-ekb.ru
+					.description Профессиональное обустройство гаража
+			.header-top__contacts(itemprop='address' itemscope='' itemtype='http://schema.org/PostalAddress')
+				.address(itemprop='streetAddress') г. Екатеринбург, ул Фрунзе, 96/В
+				.phone
+					a(href='tel:+79122838810' itemprop='telephone') +7 (912) 283-8810
+		.header-content
+			.header-content__head
+				h1.h1 Отделка гаража под ключ
+			.blueLine
+			.header-content__description
+				p Комплексное обустройство гаражей и подсобных помещений в Екатеринбурге
+			.header-content__list
+				//- item 1
+				.list-item(onclick='scrollRackFunction()')
+					img(src="/assets/img/icons/rack.svg" alt="image")
+					| Организация модульной системы хранения
+				script.
+					function scrollRackFunction() {
+					var elmnt = document.getElementById("rackFunction");
+					elmnt.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center'
+					});
+					}
+				//- item 2
+				.list-item(onclick='scrollQualityFunction()')
+					img(src="/assets/img/icons/quality.svg" alt="image")
+					| Полная отделка гаража от пола до потолка
+				script.
+					function scrollQualityFunction() {
+					var elmnt = document.getElementById("qualityFunction");
+					elmnt.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center'
+					});
+					}
+				//- item 3
+				.list-item(onclick='scrollFloorFunction()')
+					img(src="/assets/img/icons/floor.svg" alt="image")
+					| Устройство гаражного напольного покрытия
+				script.
+					function scrollFloorFunction() {
+					var elmnt = document.getElementById("floorFunction");
+					elmnt.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center'
+					});
+					}
+				//- item 4
+				.list-item(onclick='scrollHeatingFunction()')
+					img(src="/assets/img/icons/heating.svg" alt="image")
+					| Установка системы отопления и освещения
+				script.
+					function scrollHeatingFunction() {
+					var elmnt = document.getElementById("heatingFunction");
+					elmnt.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center'
+					});
+					}
+		//- buttons
+		.header-actions
+			a(class=['button', 'button-success'], href='#popup:marquiz_5d7f064f1831f90044c56e9e') Рассчитать стоимость
+			//- a(class=['button', 'button-video'], href='javascrip:void(0)') Смотреть видео
+	//- scrollDown Button
+	.scroll-down
+		.mouse
+			.scroll
